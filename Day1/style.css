@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.hero{
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    background-size: cover;
+    background-image: url(./assests/bg.avif);
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    z-index: 999;
+    position: fixed;
+    top: 40px;
+    border-radius: 30px 30px 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #33333380;
+    backdrop-filter: blur(10px);
+    color: white;
+    height: 40px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active{
+    background-color: #fdfdfd;
+    color: black;
+    border-radius: 30px 30px 30px 30px;
+    transition: all 0.5s;
+}
+
+article{
+    position: absolute;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    width: 80%;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.filter-wall{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000096;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#about {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    padding: 8vw 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#page2-bottom {
+    height: 80vh;
+    width: 100%;
+    /* background-color: aliceblue; */
+    padding: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+}
+
+
+#page2-bottom h1 {
+    font-size: 4vw;
+    width: 60%;
+    line-height: 4vw;
+}
+
+#bottom-part2 {
+    width: 20%;
+    /* background-color: aqua; */
+}
+
+#bottom-part2 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#bottom-part2 p {
+    font-weight: 200;
+    margin-top: 2vw;
+    font-size: 1vw;
+}
+
+#page2 #gooey {
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #ff2d03, #ff5c0b);
+    /* background: linear-gradient(to top right,red,blue); */
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes gooey {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+.textt{
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    padding: 4vw 0;
+}
+
+.elem {
+    height: 150px;
+    width: 100%;
+    position: relative;
+
+    border-bottom: 1px solid #38383864;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.elem h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.elem .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
+
+
+#fixed-image {
+    height: 30vw;
+    width: 24vw;
+    /* background-color: red; */
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.footer{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
